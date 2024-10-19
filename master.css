@@ -19,7 +19,7 @@ body {
     height: 100%;
 }
 
-.page-content{
+.page-content {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -139,11 +139,15 @@ a {
     text-align: center;
     margin-top: 112px;
 }
-.statistics_title, .issues_title-2 {
+
+.statistics_title,
+.issues_title-2,
+.services_title-2 {
     font-size: 32px;
     line-height: 48px;
     font-weight: 600;
 }
+
 .statistics_blocks {
     display: flex;
     margin-top: 64px;
@@ -164,7 +168,7 @@ a {
 }
 
 .number {
-    color:#a70d0d;
+    color: #a70d0d;
     font-size: 48px;
     font-weight: 600;
 }
@@ -173,6 +177,7 @@ a {
     font-size: 20px;
     font-weight: 300;
 }
+
 .word-2 {
     font-size: 16px;
     font-weight: 500;
@@ -188,7 +193,8 @@ a {
     text-align: center;
 }
 
-.issues_title-1 {
+.issues_title-1,
+.services_title-1 {
     background: #68ff6d30;
     padding: 8px 16px;
     width: fit-content;
@@ -246,4 +252,110 @@ a {
     height: 100%;
     position: absolute;
     object-fit: cover;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 88px;
+    gap: 32px;
+}
+
+.services-container {
+    display: flex;
+    max-width: 1000px;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+}
+
+.services-card {
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.services_img {
+    height: 500px;
+    width: 500px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.name_block {
+    display: flex;
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 48px;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    gap: 112px;
+    margin-bottom: 12px;
+}
+.photo {
+    border-radius: 100px;
+    width: 56px;
+    height: 56px;
+}
+.img_and_name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.block_title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.block_title {
+   gap: 4px;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.video, .phone {
+    height: 40px;
+    width: 40px;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+}
+
+.text_cards {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 16px;
+}
+
+.card-2 {
+background-color: #d2bfdb30;
+padding: 24px;
+gap: 8px;
+display: flex;
+flex-direction: column;
+border-radius: 24px;
+}
+
+.card_title {
+    font-size: 24px;
+    font-weight: 600;
 }
