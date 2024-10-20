@@ -440,3 +440,104 @@ a {
     height: 100%;
     object-fit: contain;
 }
+
+.slider {
+    background-color: #a70d0d14;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 112px auto;
+    max-width: 1200px;
+    padding: 56px 112px;
+    gap: 48px;
+}
+.slider-text-img {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.slider_text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.slider_text h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.person_container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.quotes-icon {
+    background-color: #a70d0d;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+}
+.person_name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.person_name h2 {
+    font-size: 16px;
+}
+
+.person_name p {
+    font-size: 14px;
+}
+.person_img {
+    height: 300px;
+    width: 300px;
+    border-radius: 24px;
+}
+.slider-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.show-other {
+    font-size: 14px;
+    border-radius: 56px;
+    font-weight: 400;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+    padding: 12px 24px;
+    border: #c0c0c0 solid 2px;
+    background-color: inherit; 
+}
+
+.back-button, .next-button {
+    background-color: inherit;
+    border: #c0c0c0 solid 2px;
+    border-radius: 50px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* .slider_text {
+    display: flex;
+    flex-direction: column;
+} */
