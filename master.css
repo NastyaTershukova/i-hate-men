@@ -6,8 +6,10 @@
     margin: 0;
     padding: 0;
 }
+
 hr {
     border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -210,7 +212,7 @@ a {
     font-weight: 500;
 }
 
-.show-more {
+button.no_background.round {
     font-size: 14px;
     border-radius: 56px;
     font-weight: 400;
@@ -218,7 +220,7 @@ a {
     height: 100%;
     cursor: pointer;
     padding: 12px 24px;
-    background-color: #ffffff;
+    background-color: inherit;
     border: #dcdcdc solid 2px;
 }
 
@@ -393,6 +395,7 @@ a {
     flex-direction: column;
     border-radius: 24px;
 }
+
 .service-card.accent {
     background-color: #a70d0d30;
 }
@@ -411,7 +414,7 @@ a {
 
 .service-card p {
     text-align: left;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .partners {
@@ -456,11 +459,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 112px auto;
+    margin: 112px auto 0 auto;
     max-width: 1200px;
     padding: 56px 112px;
     gap: 48px;
 }
+
 .slider-text-img {
     display: flex;
     align-items: center;
@@ -494,6 +498,7 @@ a {
     width: 48px;
     height: 48px;
 }
+
 .person_name {
     display: flex;
     flex-direction: column;
@@ -507,35 +512,27 @@ a {
 .person_name p {
     font-size: 14px;
 }
+
 .person_img {
     height: 300px;
     width: 300px;
     border-radius: 24px;
 }
+
 .slider-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
+
 .buttons {
     display: flex;
     gap: 24px;
 }
 
-.show-other {
-    font-size: 14px;
-    border-radius: 56px;
-    font-weight: 400;
-    width: fit-content;
-    height: 100%;
-    cursor: pointer;
-    padding: 12px 24px;
-    border: #c0c0c0 solid 2px;
-    background-color: inherit; 
-}
-
-.back-button, .next-button {
+.back-button,
+.next-button {
     background-color: inherit;
     border: #c0c0c0 solid 2px;
     border-radius: 50px;
@@ -546,7 +543,93 @@ a {
     justify-content: center;
     cursor: pointer;
 }
-/* .slider_text {
+
+.faq {
     display: flex;
     flex-direction: column;
-} */
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    background-color: rgb(248, 249, 252);
+    padding: 48px;
+}
+
+.question_cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.question_card {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.question_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question_card_header span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.question_card p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 12px;
+    line-height: 20px;
+    /* display: none; */
+}
+
+.start_now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(6, 26, 42);
+    padding: 112px 72px;
+    gap: 48px;
+    text-align: center;
+}
+
+.start_now .section_title {
+    color: #ffffff;
+    line-height: 56px;
+}
+
+button.squared {
+    font-size: 14px;
+    border-radius: 12px;
+    font-weight: 400;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px 24px;
+    background-color: inherit;
+    border: #dcdcdca2 solid 1px;
+    color: #dcdcdca2;
+}
+
+button.squared.accent {
+    background-color: #a70d0d;
+    color: #ffffff;
+    border: none;
+}
+
+.start_now_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.start_now span {
+    color: #dcdcdca2;
+}
