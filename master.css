@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
@@ -34,10 +33,11 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 112px;
     margin-top: 32px;
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
 .logo {
@@ -67,7 +67,7 @@ a {
     padding: 14px 24px;
     font-size: 14px;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .main_info {
@@ -482,6 +482,46 @@ button.no_background.round {
     font-weight: 600;
 }
 
+.progress_bar {
+    display: flex;
+    gap: 4px;
+}
+
+.progress_bar .item {
+    background-color: #a70d0d;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 10px;
+    width: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    overflow: clip;
+}
+
+.progress_bar .item.selected div {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 0;
+    animation-name: ItemProgress;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    padding: 0;
+    overflow: clip;
+}
+
+@keyframes ItemProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.progress_bar .item.selected {
+    width: 48px;
+}
+
 .person_container {
     display: flex;
     gap: 12px;
@@ -582,6 +622,7 @@ button.no_background.round {
     font-size: 16px;
     font-weight: 600;
 }
+
 .question_card_header svg {
     width: 20px;
     aspect-ratio: 1 / 1;
@@ -619,12 +660,12 @@ button.squared {
     cursor: pointer;
     padding: 16px 24px;
     background-color: inherit;
-    border: rgba(255,255,255,0.5) solid 1px;
-    color: rgba(255,255,255,0.7);
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 button.squared.accent {
-    background-color: #a70d0d;
+    background-color: #a01665;
     color: #ffffff;
     border: none;
 }
@@ -635,5 +676,84 @@ button.squared.accent {
 }
 
 .start_now span {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    display: flex;
+    padding: 88px 160px;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.contacts_and_sections {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_contacts_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer_contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer_icon {
+    background-color: #EAECF0;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_contact a,
+.footer_contact p,
+.footer-links li a {
+    color: #616B7C;
+    font-size: 14px;
+}
+
+.footer_sections {
+    display: flex;
+    gap: 88px;
+}
+
+.footer-links li {
+    list-style: none;
+
+}
+
+.footer_section_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer_section_container h2 {
+    font-size: 20px;
+}
+
+.footer_copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_copyright span {
+    font-size: 16px;
+}
+
+footer hr {
+    margin: auto -88px;
 }
