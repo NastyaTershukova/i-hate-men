@@ -493,17 +493,17 @@ button.no_background.round {
 }
 
 .progress_bar .item {
-    background-color: #a70d0d;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 10px;
-    width: 18px;
+    background-color: #ffffff;
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    height: 6px;
+    width: 40px;
     border-radius: 100px;
     cursor: pointer;
     overflow: clip;
 }
 
 .progress_bar .item.selected div {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #a70d0d;
     height: 100%;
     width: 0;
     animation-name: ItemProgress;
@@ -524,7 +524,7 @@ button.no_background.round {
 }
 
 .progress_bar .item.selected {
-    width: 48px;
+    width: 88px;
 }
 
 .quote-author_container {
@@ -652,14 +652,17 @@ button.no_background.round {
 }
 
 .start_now {
+    background-color: rgb(6, 26, 42);
+}
+
+.start_now_content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(6, 26, 42);
-    padding: var(--section_gap) 72px;
     gap: 48px;
     text-align: center;
+    padding: var(--page_padding);
 }
 
 .start_now .section_title {
@@ -696,9 +699,10 @@ button.squared.accent {
 
 footer {
     display: flex;
-    padding: 88px 160px;
     flex-direction: column;
     gap: 48px;
+    padding: 0 var(--page_padding);
+    margin-top: var(--section_gap);
 }
 
 .contacts_and_sections {
