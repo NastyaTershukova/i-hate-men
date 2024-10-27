@@ -56,6 +56,12 @@ header {
     gap: 72px;
     font-size: 16px;
 }
+.nav-links li a {
+    transition: .3s ease-out;
+}
+.nav-links li a:hover {
+    color: #a70d0d;
+}
 
 a {
     text-decoration: none;
@@ -71,6 +77,12 @@ a {
     font-size: 14px;
     cursor: pointer;
     font-weight: 600;
+    transition: .3s background-color ease-out;
+}
+
+.contact_button:hover {
+    background: #19193ad4;
+    transition-duration: .1s;
 }
 
 .main_info {
@@ -119,6 +131,17 @@ a {
     padding: var(--border-width);
     overflow: clip;
     background: linear-gradient(45deg, rgb(213, 44, 0), rgb(226, 150, 136), rgb(229, 207, 207) 45%, rgb(229, 207, 207), rgb(229, 207, 207) 55%, rgb(210, 127, 164), rgb(162, 2, 98));
+    transition: .3s background-color ease-out, .3s scale;
+}
+
+.book_now div:hover {
+    background: #ac1616;
+    transition-duration: .1s;
+}
+
+.book_now:active {
+    scale: 0.9;
+    transition-duration: 0;
 }
 
 .book_now div {
@@ -224,7 +247,14 @@ button.no_background.round {
     cursor: pointer;
     padding: 12px 24px;
     background-color: inherit;
-    border: rgba(0,0,0,0.2) solid 2px;
+    border: rgba(0, 0, 0, 0.2) solid 2px;
+    transition: .3s background-color ease-out, .3s border ease-out;
+}
+
+button.no_background.round:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+    transition-duration: .1s;
 }
 
 .cards-container {
@@ -252,10 +282,17 @@ button.no_background.round {
     font-weight: 600;
     border-radius: 24px;
     padding: 10px 20px;
-    width: fit-content;
+    width: 188px;
+    /* width: fit-content; */
     height: fit-content;
     z-index: 1;
     margin-bottom: 16px;
+    cursor: pointer;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+
+    transition: width .3s ease-out, background-color .3s ease-out, text-align .3s ease-in-out;
 }
 
 .card_img {
@@ -263,7 +300,21 @@ button.no_background.round {
     height: 100%;
     position: absolute;
     object-fit: cover;
+    transition: .3s ease-out;
+    filter: grayscale(100%);
 }
+
+.card_text:hover ~ .card_img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card_text:hover {
+    width: calc(100% - 40px);
+    background-color: #EADAFB;
+    text-align: left;
+}
+
 
 .services {
     display: flex;
@@ -490,28 +541,38 @@ button.no_background.round {
 
 .progress_bar {
     display: flex;
-    gap: 4px;
 }
 
 .progress_bar .item {
+    background: none;
+    cursor: pointer;
+    padding: 3px 2px;
+    border: 0;
+}
+
+.progress_bar .item div {
     background-color: #ffffff;
     border: 0.5px solid rgba(255, 255, 255, 0);
     height: 6px;
     width: 40px;
     border-radius: 100px;
-    cursor: pointer;
     overflow: clip;
+    padding: 0;
 }
 
 .progress_bar .item.selected div {
+    width: 88px;
+}
+
+.progress_bar .item.selected span {
     background-color: #a70d0d;
     height: 100%;
     width: 0;
+    display: block;
     animation-name: ItemProgress;
     animation-duration: 5s;
     animation-fill-mode: forwards;
     padding: 0;
-    overflow: clip;
 }
 
 @keyframes ItemProgress {
@@ -522,10 +583,6 @@ button.no_background.round {
     to {
         width: 100%;
     }
-}
-
-.progress_bar .item.selected {
-    width: 88px;
 }
 
 .quote-author_container {
@@ -593,7 +650,15 @@ button.no_background.round {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: .3s background-color ease-out, .3s border ease-out;
 }
+
+.quote-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+    transition-duration: .1s;
+}
+
 .quote-button svg {
     width: 24px;
     aspect-ratio: 1 / 1;
@@ -681,12 +746,25 @@ button.squared {
     background-color: inherit;
     border: rgba(255, 255, 255, 0.5) solid 1px;
     color: rgba(255, 255, 255, 0.7);
+    transition: .3s background-color ease-out, .3s border ease-out;
+}
+
+button.squared:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+    transition-duration: .1s;
 }
 
 button.squared.accent {
     background-color: #a01665;
     color: #ffffff;
     border: none;
+    transition: .3s background-color ease-out;
+}
+
+button.squared.accent:hover {
+    background: #c31176;
+    transition-duration: .1s;
 }
 
 .start_now_buttons {
@@ -745,9 +823,17 @@ footer {
     gap: 48px;
 }
 
+.footer_contact a {
+    transition: .3s ease-out;
+}
+
 .footer-links li {
     list-style: none;
+    transition: .3s ease-out;
+}
 
+.footer-links li a:hover, .footer_contact a:hover {
+    color: #000000;
 }
 
 .footer_section_container {
