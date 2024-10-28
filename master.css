@@ -58,6 +58,7 @@ header {
 }
 .nav-links li a {
     transition: .3s ease-out;
+    text-wrap: nowrap;
 }
 .nav-links li a:hover {
     color: #a70d0d;
@@ -380,7 +381,7 @@ button.no_background.round:hover {
     align-items: center;
 }
 
-.doctor_calling>img {
+.doctor_calling img {
     /* FIX aka .photo */
     border-radius: 100px;
     width: 56px;
@@ -396,16 +397,26 @@ button.no_background.round:hover {
     gap: 4px;
 }
 
-.doctor_calling .text_column .name {
+.doctor_calling .name {
     font-size: 16px;
     font-weight: 600;
     text-wrap: nowrap;
 }
 
-.doctor_calling .text_column .status {
+.doctor_calling .status {
     font-size: 16px;
     font-weight: 400;
     text-wrap: nowrap;
+}
+
+.doctor_calling svg {
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    fill: white;
+}
+
+.phone_icon svg {
+    fill: #CA1A1A;
 }
 
 .doctor_calling .icons {
@@ -430,8 +441,8 @@ button.no_background.round:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    aspect-ratio: 1 / 1;
 }
 
 .phone_icon {
