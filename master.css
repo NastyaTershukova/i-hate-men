@@ -80,6 +80,10 @@ a {
     transition: .3s background-color ease-out;
 }
 
+.contact_button-phone {
+    display: none;
+}
+
 .contact_button:hover {
     background: #19193ad4;
     transition-duration: .1s;
