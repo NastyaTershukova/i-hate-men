@@ -4,7 +4,7 @@
     }
     .main_img {
         height: auto;
-        width: 50%;
+        max-width: 30vw;
     }
     .main-title {
         font-size: 36px;
