@@ -92,6 +92,7 @@ document.querySelector('.quote-back').addEventListener('click', function() {
         currentQuote = quotes.length - 1;
     }
     showQuote(currentQuote);
+    startSpinningQuotes();
 });
 
 function startSpinningQuotes () {
