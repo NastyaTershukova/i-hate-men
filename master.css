@@ -56,10 +56,12 @@ header {
     gap: 72px;
     font-size: 16px;
 }
+
 .nav-links li a {
     transition: .3s ease-out;
     text-wrap: nowrap;
 }
+
 .nav-links li a:hover {
     color: #a70d0d;
 }
@@ -175,20 +177,26 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.main_img {
+    position: relative;
+    width: 28vw;
+    aspect-ratio: 1/1.2;
     border-radius: 12px;
     box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.3);
     border: #ffffff solid 2px;
+    overflow: clip;
+}
+
+.main_img {
     object-fit: cover;
-    width: 30vw;
-    aspect-ratio: 1/1.2;
-    display: none;
+    opacity: 0;
+    transition: .3s opacity ease-out;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .main_img.active {
-    display: block;
+    opacity: 1;
 }
 
 .progress_bar.main {
@@ -227,6 +235,7 @@ a {
     font-weight: 600;
     max-width: 920px;
 }
+
 .start_now .section_title,
 .partners .section_title,
 .issues .section_title {
@@ -573,12 +582,13 @@ button.no_background.round:hover {
     margin: var(--section_gap) 0 0 0;
     padding: 56px var(--page_padding);
 }
+
 .reviews-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -587,9 +597,19 @@ button.no_background.round:hover {
     display: flex;
     align-items: center;
     gap: 48px;
+    display: none;
+    /* opacity: 0;
+    transition: .3s opacity ease-out; */
 }
 
-.reviews-quote > div {
+.reviews-quote.active {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    /* opacity: 1; */
+}
+
+.reviews-quote>div {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -600,18 +620,19 @@ button.no_background.round:hover {
     font-weight: 600;
 }
 
-.progress_bar {
+.progress_bar.quote {
     display: flex;
+    margin-right: auto;
 }
 
-.progress_bar .item {
+.progress_bar .item, .progress_bar .pill {
     background: none;
     cursor: pointer;
     padding: 3px 2px;
     border: 0;
 }
 
-.progress_bar .item div {
+.progress_bar .item div, .progress_bar .pill div {
     background-color: #ffffff;
     border: 0.5px solid rgba(255, 255, 255, 0);
     height: 6px;
@@ -619,13 +640,14 @@ button.no_background.round:hover {
     border-radius: 100px;
     overflow: clip;
     padding: 0;
+    transition: .3s width ease-out;
 }
 
-.progress_bar .item.selected div {
+.progress_bar .item.selected div, .progress_bar .pill.selected div {
     width: 88px;
 }
 
-.progress_bar .item.selected span {
+.progress_bar .item.selected span, .progress_bar .pill.selected span {
     background-color: #a70d0d;
     height: 100%;
     width: 0;
@@ -633,6 +655,7 @@ button.no_background.round:hover {
     animation-name: ItemProgress;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
     padding: 0;
 }
 
@@ -678,10 +701,11 @@ button.no_background.round:hover {
 }
 
 .quote-author_photo {
-    width: 300px;
+    width: 280px;
     aspect-ratio: 1 / 1;
     border-radius: 24px;
 }
+
 .reviews hr {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -703,7 +727,7 @@ button.no_background.round:hover {
 
 .quote-button {
     background-color: inherit;
-    border: rgba(0,0,0,0.2) solid 2px;
+    border: rgba(0, 0, 0, 0.2) solid 2px;
     border-radius: 50px;
     width: 48px;
     height: 48px;
@@ -895,7 +919,8 @@ footer {
     transition: .3s ease-out;
 }
 
-.footer-links li a:hover, .footer_contact a:hover {
+.footer-links li a:hover,
+.footer_contact a:hover {
     color: #000000;
 }
 
@@ -919,10 +944,11 @@ footer {
     display: flex;
     justify-content: center;
     height: 72px;
-    border-top: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     margin: 64px 0 0 0;
     padding: 0 var(--page_padding);
 }
+
 .footer_copyright-content {
     width: 100%;
     max-width: var(--max_width);

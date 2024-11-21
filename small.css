@@ -2,26 +2,32 @@
     * {
         --page_padding: 40px;
     }
-    .main_img {
-        height: auto;
-        max-width: 30vw;
+
+    .main-images {
+        width: 32vw;
     }
+
     .main-title {
         font-size: 36px;
     }
+
     .red-pill {
         font-size: 14px;
         padding: 6px 12px;
     }
+
     .section_title {
         font-size: 28px;
     }
+
     .footer_contacts_container {
         margin-right: 64px;
     }
+
     .quote-author_photo {
         width: 250px;
     }
+
     .reviews-quote {
         gap: 24px;
     }

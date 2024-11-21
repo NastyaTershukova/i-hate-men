@@ -26,6 +26,8 @@
         position: absolute;
         top: 24px;
         right: 24px;
+        cursor: pointer;
+        border: none;
     }
 
     .nav-links {
@@ -52,8 +54,8 @@
         max-width: 450px;
     }
 
-    .main_img {
-        width: 70%;
+    .main-images {
+        width: 50vw;
     }
 
     .statistics_blocks {
