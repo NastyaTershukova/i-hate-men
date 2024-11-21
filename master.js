@@ -83,19 +83,20 @@ document.querySelector('.quote-next').addEventListener('click', function() {
         currentQuote = 0;
     }
     showQuote(currentQuote);
+    startSpinningQuotes();
 });
 
 document.querySelector('.quote-back').addEventListener('click', function() {
     currentQuote = currentQuote - 1;
-    if (currentQuote <= quotes.length) {
-        currentQuote = 0;
+    if (currentQuote < 0) {
+        currentQuote = quotes.length - 1;
     }
     showQuote(currentQuote);
 });
 
 function startSpinningQuotes () {
     if (quoteInterval) {
-        clearInterval(interval)
+        clearInterval(quoteInterval)
     }
     quoteInterval = setInterval(() => {
         currentQuote = currentQuote + 1;
