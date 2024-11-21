@@ -1,6 +1,6 @@
 let images = document.querySelectorAll('.main-images img');
 let currentImage = 0;
-let interval;
+let interval, quoteInterval;
 
 function initializeProgressBar() {
     document.querySelector('.progress_bar.main').innerHTML = '';
@@ -94,10 +94,10 @@ document.querySelector('.quote-back').addEventListener('click', function() {
 });
 
 function startSpinningQuotes () {
-    if (interval) {
+    if (quoteInterval) {
         clearInterval(interval)
     }
-    interval = setInterval(() => {
+    quoteInterval = setInterval(() => {
         currentQuote = currentQuote + 1;
         if (currentQuote >= quotes.length) {
             currentQuote = 0;
