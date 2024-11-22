@@ -107,3 +107,47 @@ function startSpinningQuotes () {
     }, 5000);
 }
 startSpinningQuotes();
+
+//loading faq
+
+function loadFaq() {
+    document.querySelector('.question_cards_container').innerHTML = '';
+    for (let i=0; i<faq.length; i++) {
+        let card = document.createElement('button');
+        card.className = 'question_card not_initialized';
+        card.innerHTML = `
+        <div class="question_card_header">
+            <span>${faq[i].title}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path
+                    d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z">
+                </path>
+            </svg>
+        </div>
+        <p>${faq[i].content}</p>
+        `;
+        card.onclick = function() {
+            openQuestion(i);
+        }
+        document.querySelector('.question_cards_container').appendChild(card);
+    }
+}
+loadFaq();
+
+function initializeFaqHeight() {
+    let cards = document.querySelectorAll('.question_card');
+    for (let i=0; i<cards.length; i++) {
+        let height = getFullHeight(cards[i].querySelector('p'));
+        cards[i].style.setProperty('--height', `${height}px`);
+        cards[i].classList.remove('not_initialized');
+    }
+}
+initializeFaqHeight();
+
+function openQuestion(number) {
+    document.querySelectorAll('.question_card')[number].classList.toggle('opened');
+}
+
+function getFullHeight(element) {
+    return element.offsetHeight; //возвращает высоту элемента (н-р 300, 560 и пр.)
+}
