@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Психологическая помощь для женщин</title>
     <!-- <link rel="shortcut icon" href="img/browser_icon.png" type="image/x-icon"> -->
-    <link rel="stylesheet" href="master.css">
-    <link rel="stylesheet" href="small.css">
-    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/phone.css">
 </head>
 
 <body>
     <div class="page-content">
         <header>
-            <!-- <img src="img/logo.png" class="logo"> -->
-            <div class="logo">I HATE MEN</div>
-            <button class="contact_button-phone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0d0c0c" viewBox="0 0 256 256">
-                    <path
-                        d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z">
-                    </path>
-                </svg>
-            </button>
+            <a href="index.html">
+                <div class="logo">I HATE MEN</div>
+            </a>
+            <a href="tel:+79608333210" class="call-link">
+                <button class="contact_button-phone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0d0c0c" viewBox="0 0 256 256">
+                        <path
+                            d="M231.88,175.08A56.26,56.26,0,0,1,176,224C96.6,224,32,159.4,32,80A56.26,56.26,0,0,1,80.92,24.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,117.39,96c-.18.27-.37.52-.57.77L96,121.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,231.88,175.08Z">
+                        </path>
+                    </svg>
+                </button>
+            </a>
             <div class="menu">
                 <ul class="nav-links">
-                    <li><a href="#about-us">О нас</a></li>
-                    <li><a href="#service">Услуги</a></li>
-                    <li><a href="test.html">Тесты</a></li>
+                    <li><a href="index.html">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="tests.html">Тесты</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </div>
-            <button class="contact_button">Позвонить</button>
+            <a href="tel:+79608333210">
+                <button class="contact_button">Позвонить</button>
+            </a>
         </header>
         <section class="main_info">
             <div class="title">
@@ -132,7 +137,7 @@
             <button class="no_background round">Показать еще</button>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
             <span class="green_pill">Мы здесь, чтобы помочь вам</span>
             <h1 class="section_title">Мы оказываем самую эффективную психологическую помощь по высшим стандартам
                 качества</h1>
@@ -267,7 +272,8 @@
                 <div class="reviews-quote">
                     <div>
                         <p class="review-text">« Мне жаль, что в нашем мире существуют мужчины, кроме геев. Гетеро
-                            мужчины обрекают женщин на вечные страдания, а мы приносим им покой и радость. Данная клиника - настоящее спасение всего женского пола! »</p>
+                            мужчины обрекают женщин на вечные страдания, а мы приносим им покой и радость. Данная
+                            клиника - настоящее спасение всего женского пола! »</p>
                         <div class="quote-author_container">
                             <div class="quotes-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
@@ -287,7 +293,8 @@
                 </div>
                 <div class="reviews-quote">
                     <div>
-                        <p class="review-text">« Я просто ненавижу гетеро мужчин и больше мне нечего добавить! Я люблю женщин!!! »</p>
+                        <p class="review-text">« Я просто ненавижу гетеро мужчин и больше мне нечего добавить! Я люблю
+                            женщин!!! »</p>
                         <div class="quote-author_container">
                             <div class="quotes-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
@@ -329,7 +336,7 @@
         </section>
         <section class="faq">
             <h1 class="section_title">Часто задаваемые вопросы</h1>
-            
+
             <div class="question_cards_container"></div>
             <button class="no_background round">Задать вопрос</button>
         </section>
@@ -433,8 +440,8 @@
             </div>
         </div>
     </footer>
-    <script src="faq.js"></script>
-    <script src="master.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/master.js"></script>
 </body>
 
 </html>

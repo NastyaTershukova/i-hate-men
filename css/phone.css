@@ -30,6 +30,10 @@
         border: none;
     }
 
+    .call-link {
+        display: block;
+    }
+
     .nav-links {
         gap: 48px;
     }
