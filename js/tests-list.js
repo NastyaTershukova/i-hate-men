@@ -1,27 +1,3 @@
-const allTests = [
-    {
-        title: 'Анализ общения с гетеро мужчинами',
-        image: 'sad.jpg',
-        description: 'Направлен на оценку правильности общения с гетеро мужчинами, может помочь лучше понять свои взаимодействия с ними.'
-    },
-    {
-        title: 'Шкала стресса (PSS)',
-        image: 'stress.jpg',
-        description: 'Поможет оценить уровень стресса, который испытывает женщина при общении с гетеро мужчинами.'
-    },
-    {
-        title: 'Шкала стресса (PSS)',
-        image: 'stress.jpg',
-        description: 'Поможет оценить уровень стресса, который испытывает женщина при общении с гетеро мужчинами.'
-    },
-    {
-        title: 'Шкала стресса (PSS)',
-        image: 'stress.jpg',
-        description: 'Поможет оценить уровень стресса, который испытывает женщина при общении с гетеро мужчинами.'
-    },
-
-];
-
 function testsList(allTests) {
     document.querySelector('.test-cards').innerHTML = '';
     for (let i = 0; i < allTests.length; i++) {
@@ -36,7 +12,7 @@ function testsList(allTests) {
             <div class="test-card-content">
                 <img src="img/${allTests[i].image}">
                 <div class="test-card-text">
-                    <p>${allTests[i].description}</p>
+                    <p>${allTests[i].shortDescription}</p>
                         <span class="learn-more">
                             <p>Подробнее</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -52,4 +28,4 @@ function testsList(allTests) {
         document.querySelector('.test-cards').appendChild(card);
     }
 }
-testsList(allTests);
+testsList(tests);
